@@ -1,0 +1,30 @@
+# Bỏ qua môi trường ảo của Python (cực kỳ quan trọng, vì Docker sẽ tự cài lại)
+venv/
+env/
+myenv/
+.venv/
+
+# Bỏ qua các file cache do Python sinh ra lúc chạy
+__pycache__/
+*.pyc
+*.pyo
+
+# Bỏ qua lịch sử Git
+.git/
+.gitignore
+
+# Bỏ qua file cấu hình môi trường chứa thông tin bảo mật
+.env
+
+# Bỏ qua các file model nặng (Vì chúng ta đã dùng Volume để mount từ ngoài vào rồi)
+ecommerce-classification-model/
+*.pt
+*.bin
+*.safetensors
+
+# Bỏ qua các file log hoặc database local (nếu có)
+*.log
+*.sqlite3
+
+README.md
+upload-model.py
