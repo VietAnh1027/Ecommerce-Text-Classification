@@ -22,7 +22,7 @@ def download_model_folder():
 download_model_folder()
 app = FastAPI(title="Hệ thống phân loại danh mục hàng hóa")
 
-le = joblib.load(r"ecommerce-classification-model\label_encoder.pkl")
+le = joblib.load(os.path.join("ecommerce-classification-model", "label_encoder.pkl"))
 classes = le.classes_
 tokenizer = AutoTokenizer.from_pretrained("ecommerce-classification-model")
 model = AutoModelForSequenceClassification.from_pretrained("ecommerce-classification-model")
